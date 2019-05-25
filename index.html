@@ -1,0 +1,56 @@
+<html>
+    <style>
+        body {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+   font-size: 0;
+
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+       font-size: 0;
+        }
+        img {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            margin-left: -32px;
+        }
+    </style>
+    <body id="gentags">
+        <img src="https://www.dropbox.com/s/i9r5kfj529uc0z7/1.png?raw=1 ">  
+        <img src="https://www.dropbox.com/s/czk2tryowfc6cp1/2.png?raw=1 ">
+        <img src="https://www.dropbox.com/s/0zbq2hwbd3yvyu9/3.png?raw=1">
+       <img src="https://www.dropbox.com/s/dhaxiki9snjgiac/4.png?raw=1 ">
+       <img src="https://www.dropbox.com/s/djvcrj5490o8ma2/5.png?raw=1 ">
+       <img src="https://www.dropbox.com/s/s2brp7li2wwnx7u/6.png?raw=1 ">
+       <img src="https://www.dropbox.com/s/jlnuuxdjtsa902c/7.png?raw=1 ">
+       <img src="https://www.dropbox.com/s/0qay5s7w3tvyn73/8.png?raw=1 ">
+    </body>
+    <script>
+       (function() {
+    function scrollHorizontally(e) {
+        e = window.event || e;
+        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+        document.getElementById('gentags').scrollLeft -= (delta*40); // Multiplied by 40
+        e.preventDefault();
+    }
+    if (document.getElementById('gentags').addEventListener) {
+        // IE9, Chrome, Safari, Opera
+        document.getElementById('gentags').addEventListener("mousewheel", scrollHorizontally, false);
+        // Firefox
+        document.getElementById('gentags').addEventListener("DOMMouseScroll", scrollHorizontally, false);
+    } else {
+        // IE 6/7/8
+        document.getElementById('gentags').attachEvent("onmousewheel", scrollHorizontally);
+    }
+})();
+    </script>
+</html>
